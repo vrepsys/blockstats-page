@@ -39,7 +39,7 @@ export default class App extends React.Component {
                   Charts are updated every day around 10:00 UTC.
                 </p>
                 <p>
-                  Find more information and ask questions on <a href="#">Blockstack forum.</a>
+                  Find more information and ask questions on <a href="https://forum.blockstack.org/t/theblockstats-com-is-now-online/6284">Blockstack forum.</a>
                 </p>
                 <p>
                   TheBlockstats code is <a href="https://github.com/vrepsys/blockstats">open</a> <a href="https://github.com/vrepsys/blockstats-page">source.</a>
