@@ -1,0 +1,25 @@
+.chart-container {
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  margin: 5px;
+  padding: 16px 2px 6px 2px;
+
+  .info-box {
+    padding: 0 20px 0 20px;
+  }
+
+  .explanation {
+    font-size: 0.5em;
+    margin: 5px 0 1px 0;
+  }
+}
+
+h1 {
+  // margin: 8px 0 0 12px;
+  font-weight: 700;
+  font-size: 1em;
+  color: #3b3b3b;
+  margin: 0;
+}
+
