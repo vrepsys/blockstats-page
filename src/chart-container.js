@@ -9,7 +9,7 @@ export default class ChartContainer extends React.Component {
         <div className="chart-container">
           <div className="info-box">
             <h1>{this.props.title}</h1>
-            <span class='explanation'>{this.props.description}</span>
+            <span className='explanation'>{this.props.description}</span>
           </div>
           {this.props.children}
         </div>

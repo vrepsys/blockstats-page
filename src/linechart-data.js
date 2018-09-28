@@ -1,8 +1,13 @@
 import moment from 'moment'
-import {clone, cloneDeep, maxBy} from 'lodash'
+import {clone, cloneDeep, maxBy, min, max} from 'lodash'
 
 function getLatestValues(data) {
   return clone(maxBy(data, (d) => d.date).values);
+}
+
+function getDateRange(data) {
+  const dates = data.map((d) => d.date)
+  return [min(dates), max(dates)];
 }
 
 function removeHttpFromNames(data) {
@@ -54,4 +59,4 @@ function getCategories(data) {
    return cats;
 }
 
-export {parseDates, getLatestValues, removeHttpFromNames, getDataByDate, getCategories, includeOnly};
+export {parseDates, getDateRange, getLatestValues, removeHttpFromNames, getDataByDate, getCategories, includeOnly};

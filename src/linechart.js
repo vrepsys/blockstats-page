@@ -90,6 +90,7 @@ export default class LineChart extends React.Component {
           padding={{ top: 20, bottom: 24, left: 50, right:130 }}
           scale={{ x: "time" }}
           domain={this.props.domain}
+          minDomain={0}
           containerComponent={
           <CustomCursorContainer 
           onCursorLeave={() => {
