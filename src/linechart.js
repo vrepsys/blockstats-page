@@ -5,6 +5,12 @@ import Tooltip from './tooltip'
 import CustomCursorContainer from './custom-cursor-container'
 import {removeHttpFromNames, getDataByDate, getCategories, includeOnly} from './linechart-data'
 
+import {maxBy} from 'lodash'
+
+function getLatest(data) {
+  return maxBy(data, (d) => d.date)
+}
+
 const colors = ['#993366', '#339966', '#666699', '#FF6600', '#0066CC', '#008080',
 '#993300', '#333399', '#800000', '#660066', '#003366', '#FF8080'];
 
@@ -79,6 +85,10 @@ export default class LineChart extends React.Component {
                   y="count"
                 />
    });
+
+    categories.sort((a, b) => {
+      return getLatest(b.data).count - getLatest(a.data).count
+    })
 
     return (
       <div ref={el => this.container = el}>
