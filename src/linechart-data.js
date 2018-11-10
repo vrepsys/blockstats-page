@@ -1,8 +1,13 @@
 import moment from 'moment'
 import {clone, cloneDeep, maxBy, min, max} from 'lodash'
 
+
+function getLatest(data) {
+  return maxBy(data, (d) => d.date)
+}
+
 function getLatestValues(data) {
-  return clone(maxBy(data, (d) => d.date).values);
+  return clone(getLatest(data).values);
 }
 
 function getDateRange(data) {
@@ -59,4 +64,13 @@ function getCategories(data) {
    return cats;
 }
 
-export {parseDates, getDateRange, getLatestValues, removeHttpFromNames, getDataByDate, getCategories, includeOnly};
+function sortCategoriesByLatestCount(categories) {
+  categories.sort((a, b) => {
+    return getLatest(b.data).count - getLatest(a.data).count;
+  });
+}
+
+export {
+  parseDates, getDateRange, getLatestValues, 
+  removeHttpFromNames, getDataByDate, getCategories, 
+  sortCategoriesByLatestCount, includeOnly};
