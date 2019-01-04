@@ -3,28 +3,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
 
 @include media-breakpoint-down(xs) { 
-  body {
-    font-size: 18px;
+  body,html {
+    font-size: 21px;
   }
 }
 
 @include media-breakpoint-up(sm) { 
-  body {
+  body,html {
     font-size: 24px;
   }
  }
 @include media-breakpoint-up(md) { 
-  body {
+  body,html {
     font-size: 26px;
   }
 }
 @include media-breakpoint-up(lg) { 
-  body {
+  body,html {
     font-size: 30px;
   }
 }
 
-body {
+body,html {
   background-color: #f1f1f1;
   font-family: 'Montserrat', sans-serif;
   color: #272727;
@@ -43,7 +43,7 @@ body {
 .intro {
   margin: 0 5px;
   p {
-    font-size: 0.62em;
+    font-size: 0.65em;
     margin: 5px 0;
   }
 }

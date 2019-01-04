@@ -1,0 +1,21 @@
+table.top-apps-table {
+  font-size: 0.65rem;
+  margin: 20px;
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+
+.top-apps-table .app-name a {
+  color: #272727;
+  text-decoration: none;
+}
+
+.top-apps-table td {
+  border-bottom: 1px solid #dedede;
+  padding: 5px;
+}
+
+.top-apps-table .app-name a:hover {
+  color: #cc15b2;
+  text-decoration: underline;
+}
