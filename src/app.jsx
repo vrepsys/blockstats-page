@@ -30,7 +30,6 @@ export default class App extends ReactQueryParams {
     axios.get('/data/apps.top100.csv')
       .then((response) => {
         const top100apps = Papa.parse(response.data).data.slice(1).filter((el) => el.length > 1)
-        console.log(top100apps);
         this.setState({apps: top100apps});
       })
       .catch((error) => console.log(error))

@@ -45,7 +45,7 @@ function getDataByDate(data) {
 }
 
 function getCategories(data) {
-  const cats = data[0].values.map((el) => {
+  const cats = data[data.length-1].values.map((el) => {
     return {
       name: el.name,
       id: el.name
@@ -54,6 +54,13 @@ function getCategories(data) {
   cats.map((cat) => {
     cat.data = data.map((d) => {
       const app = d.values.find((x) => x.name === cat.name)
+      if (!app) {
+        return {
+          name: cat.name,
+          date: d.date,
+          count: 0
+        }
+      }
       return {
         name: cat.name,
         date: d.date,
