@@ -1,20 +1,21 @@
 import React from 'react';
 import BarChart from './barchart'
 import LineChart from './linechart'
-import moment from 'moment'
+import ReactQueryParams from 'react-query-params';
 import {parseDates, getLatestValues, getDateRange} from './linechart-data'
 import axios from 'axios';
 import ChartContainer from './chart-container'
 import './app.scss'
 
-export default class App extends React.Component {
+export default class App extends ReactQueryParams {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   componentDidMount() {
-    axios.get('/data/data.json')
+    const dataFile = this.queryParams.data || '/data/data.json'
+    axios.get(dataFile)
       .then((response) => {
         const {appsData, domainsData} = response.data;
         parseDates(appsData);
