@@ -6,6 +6,9 @@
   body,html {
     font-size: 21px;
   }
+  .no-padding {
+    padding: 0;
+  }
 }
 
 @include media-breakpoint-up(sm) { 
