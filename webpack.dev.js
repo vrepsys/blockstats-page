@@ -15,6 +15,14 @@ module.exports = merge(common, {
     hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([{
+      from: './data/sample-data.json',
+      to: './data/data.json'
+    }]),
+    new CopyWebpackPlugin([{
+      from: './data/apps.top100.csv',
+      to: './data/apps.top100.csv'
+    }])
   ]
 });

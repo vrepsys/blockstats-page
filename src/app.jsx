@@ -69,13 +69,18 @@ export default class App extends ReactQueryParams {
                   description={
                     <span>
                       <p>
-                        An app is considered to be installed when it's present on a Blockstack user's profile. 
-                        Here's an <a href='https://gaia.blockstack.org/hub/1G4nASzd9NATfh8v21RzZJGYzCJuxNqKVg/profile.json'>example of a user profile</a> that 
-                        has several apps installed.
+                        <b>Only multiplayer apps</b> are included in this and all other charts on this page.
+                        To let their users discover each other and share data with each other multiplayer apps 
+                        share links to their gaia buckets on user profiles. 
                       </p>
                       <p>
-                        Only multiplayer apps i.e. apps where users can share their data with each other, appear on user profiles.
-                        Some of the popular Blockstack apps are single-player and thus are not included in the stats on this page.
+                        Here's an <a href='https://gaia.blockstack.org/hub/1G4nASzd9NATfh8v21RzZJGYzCJuxNqKVg/profile.json'>example of a user profile</a> that has several multiplayer apps installed.
+                      </p>
+                      <p>
+                        Theblockstats scans these user profiles daily to collect the statistics presented on this page.
+                      </p>
+                      <p>
+                        For a list that includes both single and multi-player apps visit <a href="https://app.co/blockstack">app.co/blockstack</a>
                       </p>
                     </span>
                   }>
@@ -137,7 +142,7 @@ export default class App extends ReactQueryParams {
                       This can be used to measure the growth of developer interest in Blockstack.
                     </p>
                     <p>
-                      Users that try develop a multi-player Blockstack app on their local machines 
+                      Users that try develop a multiplayer Blockstack app on their local machines 
                       appear to have a 'localhost' app on their user profiles.
                     </p>
                     </span>
@@ -158,6 +163,9 @@ export default class App extends ReactQueryParams {
                     <p>
                       You can also <a href='data/apps.all.csv'>download a CSV</a> containing all 
                       (multiplayer) Blockstack apps and their latest installation numbers.
+                    </p>
+                    <p>
+                        The list below and all other charts on this page contain <b>multiplayer apps only</b>. For a list that includes both single and multi-player apps visit <a href="https://app.co/blockstack">app.co/blockstack</a>
                     </p>
                   </span>
                   }>

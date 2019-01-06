@@ -1,8 +1,10 @@
 table.top-apps-table {
   font-size: 0.65rem;
-  margin: 20px;
+  margin: 0.6em;
   border-collapse: collapse; 
   border-spacing: 0;
+  table-layout: fixed;
+  width: 90%;
 }
 
 .top-apps-table .app-name a {
@@ -12,7 +14,17 @@ table.top-apps-table {
 
 .top-apps-table td {
   border-bottom: 1px solid #dedede;
-  padding: 5px;
+  padding: 5px 3px 5px 2px;
+}
+
+.top-apps-table td.app-name {
+  width: 80%;
+  // overflow: hidden;
+  word-wrap: break-word;
+}
+
+.top-apps-table .app-name a:hover {
+  word-wrap: break-word;
 }
 
 .top-apps-table .app-name a:hover {
