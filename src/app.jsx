@@ -48,16 +48,17 @@ export default class App extends ReactQueryParams {
               <div className="intro">
                 <h1 className="brand">THEBLOCKSTATS</h1> 
                 <p>
-                  This page charts <a href='https://blockstack.org'>Blockstack</a> related statistical data. 
-                  Charts are updated every day.
-                </p>
-                <p>
-                  Find more information and ask questions on <a href="https://forum.blockstack.org/t/theblockstats-com-is-now-online/6284">Blockstack forum.</a>
-                </p>
-                <p>
-                  TheBlockstats code is <a href="https://github.com/vrepsys/blockstats">open</a> <a href="https://github.com/vrepsys/blockstats-page">source.</a>
+                  This page charts <a href='https://blockstack.org'>Blockstack</a> related statistical data. TheBlockstats code is <a href="https://github.com/vrepsys/blockstats">open</a> <a href="https://github.com/vrepsys/blockstats-page">source.</a>
                 </p>
                 <p>Contacts: <a href='https://twitter.com/vrepsys'>twitter</a>, <a href='mailto:valdemaras@gmail.com'>email</a></p>
+                <p class='important-message'>
+                  Important: The data on this page is no longer being updated.
+                </p>
+                <p>
+                  Due to a growing size of the dataset, the <a href="https://github.com/vrepsys/blockstats">blockstats scanner</a> is no longer able to keep up.
+                  Contributions that would optimize the scanner and make theblockstats work again are very welcome. 
+                  Please contact <a href='https://twitter.com/vrepsys'>me</a> if you'd like to give it a try.
+                </p>
               </div>
             </div>
           </div>
